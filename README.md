@@ -1,6 +1,6 @@
 # Essim RL
 
-This package  contains the impletation of RL algorithms on the essim task based on the [mjrl](http://(https://github.com/aravindr93/mjrl/) package.
+This package  contains the impletation of RL algorithms on the essim task based on the [mjrl](https://github.com/aravindr93/mjrl/) package.
 
 
 # Credits
