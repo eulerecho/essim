@@ -26,10 +26,6 @@ mjrl/baselines/zero_baseline.py
 mjrl/envs/__init__.py
 mjrl/envs/essim.py
 mjrl/envs/mujoco_env.py
-mjrl/envs/peg_insertion_sawyer.py
-mjrl/envs/point_mass.py
-mjrl/envs/reacher_sawyer.py
-mjrl/envs/swimmer.py
 mjrl/policies/__init__.py
 mjrl/policies/gaussian_linear.py
 mjrl/policies/gaussian_mlp.py
