@@ -31,7 +31,7 @@ class EssimEnv(mujoco_env.MujocoEnv, utils.EzPickle):
             done=True
             terminal=10000
 
-        reward= -1200*reward_near-10*reward_ctrl+terminal #penalize distance to goal, velocity and control
+        reward= -2200*reward_near-10*reward_ctrl+terminal #penalize distance to goal, velocity and control
 
 
         return ob, reward, done, dict(reward_ctrl=reward_ctrl,reward_near=reward_near)
