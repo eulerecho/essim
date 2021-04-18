@@ -27,11 +27,11 @@ class EssimEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
         ob = self._get_obs()
 
-        if(reward_near!=0 and reward_near< 0.0010 and vel< 0.00050):
+        if(reward_near!=0 and reward_near< 0.0010 and vel< 0.0010):
             done=True
             terminal=10000
 
-        reward= -500*reward_near-10*reward_ctrl+terminal #penalize distance to goal, velocity and control
+        reward= -500*reward_near-0.1*reward_ctrl+terminal #penalize distance to goal, velocity and control
 
 
         return ob, reward, done, dict(reward_ctrl=reward_ctrl,reward_near=reward_near)
