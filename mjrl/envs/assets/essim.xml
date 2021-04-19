@@ -6,8 +6,8 @@
         <geom rgba=".9 .7 .1 1" size="0.01" friction="1 0.005 0.001" margin="0.0005" condim="6" solref=".01 1" solimp=".99 .99 .01"/>
         <joint limited="true" damping="0.05" armature=".001" margin="0.01" frictionloss="0.001"/>
     </default>
-    <option timestep="0.010" solver="Newton"/>
-    <size njmax="1500" nconmax="500" nstack="5000000"/>
+    <option timestep="0.010" integrator="RK4"/>
+
 
     <worldbody>
 
