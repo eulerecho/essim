@@ -14,7 +14,8 @@ class EssimEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         self.init_qpos = np.array([0.0164783, -0.080544, 0.000418251, 0.999723, 1.08014e-07, 3.21496e-07, -0.0235368, 0.314487, 0.492531, 0.01, 0.0136404])
 
     def step(self, a):
-        action = np.clip(a, a_min = -1, a_max = 0)
+       # action = np.clip(a, a_min = -1, a_max = 0)
+        action=a
         x_prev,y_prev,z_prev = self.data.qpos[0:3]#+np.random.normal(0,0.0005,3)
         vec = self.data.qpos[0:3]- np.array([-0.015,-0.07,0])
         reward_near = np.linalg.norm(vec) #euclidiean distance
@@ -31,7 +32,7 @@ class EssimEnv(mujoco_env.MujocoEnv, utils.EzPickle):
             done=True
             terminal=10000
 
-        reward= -1000*reward_near-10*reward_ctrl+terminal #penalize distance to goal, velocity and control
+        reward= -1500*reward_near-35*reward_ctrl+terminal #penalize distance to goal, velocity and control
 
 
         return ob, reward, done, dict(reward_ctrl=reward_ctrl,reward_near=reward_near)
