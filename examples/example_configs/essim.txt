@@ -8,7 +8,7 @@
 'sample_mode'       :   'samples',
 'rl_num_samples'    :   10000,
 'rl_num_iter'       :   2000,
-'num_cpu'           :   24,
+'num_cpu'           :   8,
 'save_freq'         :   100,
 'eval_rollouts'     :   None,
 'exp_notes'         :   'Example config for training policy with NPG on the mjrl essim task.',
